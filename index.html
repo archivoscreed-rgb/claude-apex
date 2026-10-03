@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Códice del Defensor</title>
+<meta name="description" content="Guía de Apex Legends en español: habilidades de las 28 leyendas, cómo vencer a cada una en espacios abiertos y cerrados, y un manual de Battle IQ para jugar Newcastle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#leyendas">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Códice del Defensor, inicio">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V9h3V5.5h3V9h2V5.5h2V9h2V5.5h3V9h3v11z"/><path d="M6.5 15l2-2 1.5 2 2-2 1.5 2 2-2 1.5 2"/></svg>
+      <b>Códice del Defensor</b>
+    </a>
+    <nav class="nav" aria-label="Capítulos">
+      <a href="#leyendas"><span class="num">01</span>Leyendas</a>
+      <a href="#contraguia"><span class="num">02</span>Contra-guía</a>
+      <a href="#newcastle"><span class="num">03</span>Newcastle</a>
+      <a href="#battle-iq"><span class="num">04</span>Battle IQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Portada -->
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Apex Legends · Temporada 30 «Marked» · Split 2</p>
+        <h1>Códice del <span>Defensor</span></h1>
+        <p class="lead">Las 28 leyendas explicadas habilidad por habilidad, cómo vencer a cada una en espacios abiertos y cerrados, y un manual completo para dominar el Battle IQ con Newcastle.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#leyendas">Ver las 28 leyendas</a>
+          <a class="btn" href="#newcastle">Manual de Newcastle</a>
+        </div>
+        <dl class="stats" id="stats">
+          <div><dt>Leyendas</dt><dd>28</dd></div>
+          <div><dt>Habilidades</dt><dd>84</dd></div>
+          <div><dt>Diagramas</dt><dd id="stat-dia">43</dd></div>
+          <div><dt>Clases</dt><dd>5</dd></div>
+        </dl>
+      </div>
+      <figure class="plate hero-figure" data-dia="salto" data-title="Lámina 0 · Castle Wall" data-cap="Newcastle salta hasta 75 m hacia un aliado derribado (1), gira en el aire (2) y levanta el muro con el lado electrificado hacia el enemigo (3)."></figure>
+    </div>
+  </section>
+
+  <!-- Capítulo 1 -->
+  <section class="chapter" id="leyendas">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div>
+          <p class="eyebrow">Capítulo 1</p>
+          <h2>Leyendas y habilidades</h2>
+        </div>
+        <p>Cada ficha explica qué hace cada habilidad, sus debilidades, cómo pelear contra ella en terreno abierto y en interiores, y un plan concreto con Newcastle con su diagrama. La barra roja indica cuánto complica esa leyenda a un Newcastle (1 = poco, 5 = mucho).</p>
+      </div>
+
+      <div class="filters" role="search">
+        <label class="search" for="q">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <span class="sr-only">Buscar leyenda o habilidad</span>
+          <input id="q" type="search" placeholder="Buscar leyenda o habilidad…" autocomplete="off">
+        </label>
+        <div class="chips" id="class-chips" aria-label="Filtrar por clase"></div>
+        <span class="filter-count" id="filter-count" aria-live="polite"></span>
+      </div>
+
+      <div class="index-grid" id="index-grid"></div>
+      <div id="dossiers"></div>
+    </div>
+  </section>
+
+  <!-- Capítulo 2 -->
+  <section class="chapter" id="contraguia">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div>
+          <p class="eyebrow">Capítulo 2</p>
+          <h2>Contra-guía rápida</h2>
+        </div>
+        <p>Primero, los principios que valen contra cualquier leyenda según el terreno. Después, una tabla para consultar en segundos qué hacer contra cada una, ordenable por nivel de amenaza.</p>
+      </div>
+
+      <div class="duo">
+        <div>
+          <figure class="plate" data-dia="abierto" data-title="Lámina A · Espacios abiertos" data-cap="Avanza de cobertura en cobertura (1) y toma el terreno alto antes que el enemigo (2)."></figure>
+          <ul class="principles">
+            <li><strong>Terreno alto primero.</strong> Quien dispara desde arriba ve más y expone menos cuerpo.</li>
+            <li><strong>Nunca cruces sin plan.</strong> Antes de un campo abierto decide qué te cubre: el Escudo móvil, el muro o una roca.</li>
+            <li><strong>Rota temprano y por el borde.</strong> El centro del ring es donde chocan los equipos.</li>
+            <li><strong>Castiga la movilidad en el aire.</strong> Octane, Valkyrie, Pathfinder y el salto de Revenant son blancos predecibles en vuelo.</li>
+            <li><strong>Media distancia contra kits de corto alcance</strong> (Caustic, Mad Maggie, Catalyst).</li>
+          </ul>
+        </div>
+        <div>
+          <figure class="plate" data-dia="cerrado" data-title="Lámina B · Espacios cerrados" data-cap="El escudo controla la puerta (1) y tus aliados cubren desde habitaciones distintas (2, 3) para cruzar ángulos."></figure>
+          <ul class="principles">
+            <li><strong>Controla las puertas, no te pares en ellas.</strong> El que pelea en el umbral recibe fuego de todos los ángulos.</li>
+            <li><strong>Separa al equipo en habitaciones distintas.</strong> Contra Fuse, Caustic, el lazo de Ash o el agujero negro, agruparse es perder.</li>
+            <li><strong>Escucha.</strong> Pasos, recargas, celdas y el zumbido de drones te dicen dónde está cada uno.</li>
+            <li><strong>Limpia trampas desde fuera.</strong> Barriles, púas y nodos de vallas se destruyen antes de entrar.</li>
+            <li><strong>Si el asedio no avanza en 20-30 s, rota.</strong> El ring o un tercer equipo los sacará por ti.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="section-title"><small>Tabla de consulta</small>Qué hacer contra cada leyenda</h3>
+      <div class="table-wrap">
+        <table class="qt" id="quick-table">
+          <thead>
+            <tr>
+              <th scope="col"><button class="sort-btn" data-sort="name" type="button">Leyenda</button></th>
+              <th scope="col"><button class="sort-btn" data-sort="threat" type="button">Amenaza</button></th>
+              <th scope="col">Debilidad clave</th>
+              <th scope="col">En abierto</th>
+              <th scope="col">En cerrado</th>
+              <th scope="col">Respuesta de Newcastle</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capítulo 3 -->
+  <section class="chapter" id="newcastle">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div>
+          <p class="eyebrow">Capítulo 3</p>
+          <h2>Manual de Newcastle</h2>
+        </div>
+        <p>Jackson Williams, el Defensor Heroico, hermano menor de Bangalore. Clase Apoyo. Newcastle no gana las peleas solo: hace que tu equipo pierda menos. Su trabajo es convertir derribos en revives, campo abierto en cobertura y los empujes del enemigo en errores.</p>
+      </div>
+
+      <h3 class="section-title"><small>3.1 · Kit completo</small>Qué hace cada habilidad, con números</h3>
+      <div class="kit">
+        <section class="ab">
+          <div class="ab-top">
+            <span class="ab-icon" data-icon="drag"></span>
+            <div><span class="ab-type">Pasiva</span><h4 class="ab-name">Retrieve the Wounded</h4><span class="ab-es">Rescatar al herido</span></div>
+          </div>
+          <p>Mientras revives a un aliado puedes arrastrarlo, protegido por un escudo de reanimación que despliegas delante. Es la razón de ser de Newcastle: revives donde otros no pueden.</p>
+          <dl class="stat-rows">
+            <div><dt>Movimiento al revivir</dt><dd>penalización −75% (base desde ene 2026)</dd></div>
+            <div><dt>Escudo de reanimación</dt><dd>vida = nivel de tu escudo de derribo</dd></div>
+            <div><dt>Regeneración del escudo</dt><dd>empieza tras 1 s</dd></div>
+            <div><dt>Botón de revivir</dt><dd>no hace falta mantenerlo</dd></div>
+          </dl>
+        </section>
+        <section class="ab">
+          <div class="ab-top">
+            <span class="ab-icon" data-icon="mobileshield"></span>
+            <div><span class="ab-type">Táctica</span><h4 class="ab-name">Mobile Shield</h4><span class="ab-es">Escudo móvil</span></div>
+          </div>
+          <p>Lanzas un dron que proyecta un escudo de energía y se desplaza hacia donde apuntas. Bloquea balas en ambos sentidos: ni tú ni tus aliados podéis disparar a través de él.</p>
+          <dl class="stat-rows">
+            <div><dt>Vida</dt><dd>2 × 500 (superior e inferior)</dd></div>
+            <div><dt>Duración</dt><dd>unos 20 s si no lo destruyen</dd></div>
+            <div><dt>Velocidad</dt><dd>250 (antes 160)</dd></div>
+            <div><dt>Control</dt><dd>sigue tu mira; también derribado</dd></div>
+          </dl>
+        </section>
+        <section class="ab">
+          <div class="ab-top">
+            <span class="ab-icon" data-icon="castle"></span>
+            <div><span class="ab-type">Definitiva</span><h4 class="ab-name">Castle Wall</h4><span class="ab-es">Muro del castillo</span></div>
+          </div>
+          <p>Saltas hacia un aliado o una zona y, al aterrizar, levantas un muro fortificado hacia donde miras. El lado exterior queda electrificado durante un tiempo.</p>
+          <dl class="stat-rows">
+            <div><dt>Alcance</dt><dd>35 m a un punto · 75 m a un aliado o su caja</dd></div>
+            <div><dt>Segmentos</dt><dd>9 × 750 de vida</dd></div>
+            <div><dt>Lado electrificado</dt><dd>aturde + 20 de daño al trepar</dd></div>
+            <div><dt>Recarga</dt><dd>unos 2 min</dd></div>
+          </dl>
+        </section>
+      </div>
+      <p class="note">Los valores vienen de las notas de parche y bases de datos de la comunidad (hasta el Split 2 de la Temporada 30) y pueden variar con cada actualización. Compruébalos en el Campo de tiro; la recarga del Escudo móvil aparece como 15 s o 20 s según la fuente.</p>
+
+      <h3 class="section-title"><small>3.2 · Mejoras de leyenda</small>Qué elegir y cuándo</h3>
+      <p class="prose">El 6 de enero de 2026 Respawn integró en su kit base las dos mejoras más populares (Heroes Hustle: menos penalización al revivir; Swift Shield: escudo más rápido) y añadió dos nuevas. Estas son las cuatro opciones actuales:</p>
+      <div class="upgrades">
+        <article class="up">
+          <span class="when">Revive agresivo · nueva en 2026</span>
+          <h4>Ready To Rumble</h4>
+          <p>Al revivir a un compañero se recargan tus armas y empieza una regeneración completa. Convierte un revive en un contraataque inmediato. La mejor opción en partidas normales y equipos que pelean mucho.</p>
+        </article>
+        <article class="up">
+          <span class="when">Anti-empuje · nueva en 2026</span>
+          <h4>Defensive Line</h4>
+          <p>El Escudo móvil y el escudo de reanimación repelen una vez a los enemigos que se acercan demasiado. Ideal en lobbies llenos de Octane, Revenant, Ash o Axle que buscan el cuerpo a cuerpo.</p>
+        </article>
+        <article class="up">
+          <span class="when">Juego de zona</span>
+          <h4>Stronghold</h4>
+          <p>Cada segmento de Castle Wall gana 500 de vida (1250 en total) y la electrificación dura mucho más. La opción estándar en clasificatorias cuando tu equipo juega edificios y posiciones finales.</p>
+        </article>
+        <article class="up">
+          <span class="when">Rescate de equipo</span>
+          <h4>Ultimate Savior</h4>
+          <p>Al aterrizar con Castle Wall, los aliados dentro de la zona de impacto regeneran escudo durante 15 s. Brilla en rescates a mitad de pelea y con Conduit en el equipo.</p>
+        </article>
+      </div>
+      <p class="note">Las fuentes no coinciden en qué nivel (2 o 3) ocupa cada mejora tras el cambio de enero. Mira el menú de mejoras en tu partida antes de planificar.</p>
+      <div class="plates" style="margin-top:16px">
+        <figure class="plate" data-dia="savior" data-title="Lámina 3.2 · Ultimate Savior" data-cap="Salta encima de tu equipo (1) y levanta el muro hacia el fuego (2): todos los aliados dentro del círculo regeneran escudo."></figure>
+      </div>
+      <p class="prose" style="margin-top:14px"><strong>Clase Apoyo.</strong> Como leyenda de Apoyo, Newcastle abre los contenedores azules de apoyo con suministros extra y puede fabricar en el replicador los estandartes de los compañeros caídos.</p>
+
+      <h3 class="section-title"><small>3.3 · Técnicas</small>Lo que separa a un Newcastle experto</h3>
+      <div class="cards">
+        <article class="card"><span class="tag">Escudo móvil</span><h4>Escudo antes que cabeza</h4><p>Lanza el escudo y espera a que llegue a la esquina o la puerta antes de asomarte. Lanzarlo cuando ya te disparan llega tarde. Ver lámina 3.3a.</p></article>
+        <article class="card"><span class="tag">Escudo móvil</span><h4>Asómate por los lados</h4><p>El escudo bloquea en ambos sentidos: tú tampoco disparas a través. Dispara desde sus bordes o en el momento en que el enemigo se expone para dispararle.</p></article>
+        <article class="card"><span class="tag">Escudo móvil</span><h4>Cada mitad cuenta</h4><p>Las dos mitades se rompen por separado. Si cae la superior, agáchate: la inferior sigue siendo cobertura. Vigila qué mitad están castigando.</p></article>
+        <article class="card"><span class="tag">Pasiva</span><h4>Tu escudo de derribo es tu revive</h4><p>La vida del escudo de reanimación depende de tu escudo de derribo. Prioriza siempre el de mayor nivel: con uno dorado puedes revivir en mitad de una pelea.</p></article>
+        <article class="card"><span class="tag">Pasiva</span><h4>Arrastra hacia cobertura, no hacia atrás</h4><p>La ruta del arrastre debe terminar detrás de algo sólido. Revivir en la línea de fuego solo regala un segundo derribo. Ver lámina 3.3b.</p></article>
+        <article class="card"><span class="tag">Escudo móvil</span><h4>El escudo sigue vivo en el suelo</h4><p>Derribado aún puedes mover el escudo: bloquea el remate y cubre el camino de tu aliado hacia ti. Ver lámina 3.3c.</p></article>
+        <article class="card"><span class="tag">Definitiva</span><h4>Para saltar lejos, apunta a un aliado</h4><p>El salto llega a 35 m hacia un punto, pero a 75 m si apuntas a un compañero o a su caja de muerte. Ese alcance extra es tu herramienta de rescate. Ver lámina 3.3d.</p></article>
+        <article class="card"><span class="tag">Definitiva</span><h4>Gira en el aire</h4><p>El muro se orienta hacia donde miras al aterrizar. Salta hacia el aliado y gira la cámara hacia la amenaza antes de tocar el suelo. Ver lámina 3.3e.</p></article>
+        <article class="card"><span class="tag">Definitiva</span><h4>El muro como puente</h4><p>En una rotación por campo abierto, el salto crea cobertura instantánea a mitad de camino. El equipo cruza detrás y el escudo móvil cubre el último tramo. Ver lámina 3.3f.</p></article>
+        <article class="card"><span class="tag">Definitiva</span><h4>Electrificado hacia el empuje</h4><p>Coloca el lado electrificado en la línea por la que el enemigo va a llegar. Quien trepa queda aturdido y recibe 20 de daño, justo delante de tu equipo. Ver lámina 3.3g.</p></article>
+        <article class="card"><span class="tag">Definitiva</span><h4>Salta a la caja para recuperar estandartes</h4><p>El salto también alcanza 75 m hacia la caja de muerte de un aliado. Llegas con cobertura instantánea para recoger su estandarte en zona caliente.</p></article>
+        <article class="card"><span class="tag">Interiores</span><h4>Dos paredes entre el revive y el enemigo</h4><p>En edificios, escudo en la puerta exterior y arrastre hasta la habitación interior. Ver lámina 3.3h.</p></article>
+      </div>
+      <div class="plates" style="margin-top:16px">
+        <figure class="plate" data-dia="escudoAdelantado" data-title="Lámina 3.3a · Escudo antes que cabeza" data-cap="El escudo llega primero a la puerta (1), Newcastle se asoma por el lateral (2) y el aliado entra por el otro lado (3)."></figure>
+        <figure class="plate" data-dia="rescate" data-title="Lámina 3.3b · Rescate con arrastre" data-cap="Escudo móvil delante del derribado (1), Newcastle llega por el flanco (2) y lo arrastra mientras revive hasta detrás de la roca (3)."></figure>
+        <figure class="plate" data-dia="suelo" data-title="Lámina 3.3c · Escudo desde el suelo" data-cap="Newcastle derribado coloca el escudo entre él y el enemigo (1) mientras su aliado llega a levantarlo (2)."></figure>
+        <figure class="plate" data-dia="salto" data-title="Lámina 3.3d · Salto al aliado" data-cap="Apunta al aliado (1) para el alcance de 75 m, orienta la cámara durante el vuelo (2) y aterriza con el muro entre el derribado y el fuego (3)."></figure>
+        <figure class="plate" data-dia="giro" data-title="Lámina 3.3e · Giro en el aire" data-cap="Saltas hacia el norte (1), pero la amenaza está al este: gira antes de aterrizar (2) para que el muro mire al enemigo (3) y no en la dirección del salto."></figure>
+        <figure class="plate" data-dia="puente" data-title="Lámina 3.3f · Muro como puente" data-cap="El salto planta cobertura frente al francotirador (1), el equipo cruza detrás (2) y el escudo móvil cubre el último tramo (3)."></figure>
+        <figure class="plate" data-dia="electro" data-title="Lámina 3.3g · Electrificado anti-empuje" data-cap="El muro sella el paso entre dos rocas (1); quien empuja tiene que trepar el lado electrificado (2) delante de todo tu equipo."></figure>
+        <figure class="plate" data-dia="edificio" data-title="Lámina 3.3h · Revive en interiores" data-cap="Escudo en la puerta exterior (1), arrastre a través de la puerta interior (2) y revive en la habitación del fondo (3)."></figure>
+      </div>
+
+      <h3 class="section-title"><small>3.4 · Armas y equipamiento</small>Cómo equiparlo</h3>
+      <div class="loadout">
+        <article class="card"><span class="tag">Arma 1 · corta distancia</span><h4>Escopeta o subfusil</h4><p>Tu escudo cierra distancias y tu muro provoca empujes a quemarropa. Necesitas ganar el cuerpo a cuerpo que tu kit crea: Mastiff, EVA-8, Peacekeeper, R-99, Volt o CAR, según lo que esté fuerte en el parche.</p></article>
+        <article class="card"><span class="tag">Arma 2 · media distancia</span><h4>Rifle de asalto o ametralladora ligera</h4><p>Para disparar desde los extremos del muro y castigar a quien trepa o rodea: R-301, Flatline, Havoc, Hemlok o Devotion. Si tu equipo ya tiene un francotirador, tú no lo necesitas.</p></article>
+        <article class="card"><span class="tag">Utilidad</span><h4>Prioridades de botín</h4><ul><li>Escudo de derribo del mayor nivel posible: es la vida de tu revive.</li><li>Baterías y celdas: tú curas después de cada rescate.</li><li>Granadas de arco y de fragmentación para sacar a enemigos de detrás de cobertura.</li><li>Acelerantes de definitiva si el siguiente círculo es en campo abierto.</li></ul></article>
+      </div>
+
+      <h3 class="section-title"><small>3.5 · Composiciones</small>Con quién brilla Newcastle</h3>
+      <div class="combo-grid" id="combos"></div>
+
+      <h3 class="section-title"><small>3.6 · Cómo jugarlo</small>Una partida con Newcastle, fase a fase</h3>
+      <ol class="drills">
+        <li><b>Caída y primer saqueo.</b> Aterriza cerca de tu equipo, nunca a más de 35 m. Busca escudo de derribo y un arma de corta distancia antes que nada. Tu definitiva empieza a cargarse: no la necesitas para el primer combate si estáis bien colocados.</li>
+        <li><b>Primeras peleas.</b> Juega segundo, no primero: deja que el escaramuzador entre y quédate en posición para escudar o revivir. Lanza el escudo antes de cada asomada y cuenta derribos.</li>
+        <li><b>Mitad de partida y rotaciones.</b> Planifica cada cruce: ¿qué te cubre? Usa el muro como puente solo si el campo está vigilado; si no, guárdalo. Rota temprano y por el borde del ring.</li>
+        <li><b>Terceros equipos.</b> Tras cada pelea, el muro mira hacia el ruido, no hacia los muertos. Revive, cura, saquea en menos de 30 s y vete: las cajas atraen a Ash y a cualquier equipo cercano.</li>
+        <li><b>Anillos finales.</b> Llega con la definitiva cargada. Colócala en el último cierre entre tu equipo y el enemigo con mejor ángulo; levantarla antes solo revela tu posición. Ver lámina 4.6b.</li>
+      </ol>
+
+      <h3 class="section-title"><small>3.7 · Errores comunes</small>Lo que hace perder a un Newcastle</h3>
+      <div class="mistakes">
+        <article class="mistake"><p class="bad">Gastar la definitiva al primer disparo.</p><p class="fix">Guárdala para un derribo, un cruce vigilado o un tercer equipo. Una definitiva sin objetivo es una definitiva perdida durante 2 minutos.</p></article>
+        <article class="mistake"><p class="bad">Saltar 75 m a una pelea ya perdida.</p><p class="fix">Si son dos contra tres y llegas lejos, sobrevivir para recoger el estandarte vale más que morir con tu aliado.</p></article>
+        <article class="mistake"><p class="bad">El muro mira hacia donde saltaste.</p><p class="fix">Gira la cámara en el aire hacia la amenaza antes de aterrizar.</p></article>
+        <article class="mistake"><p class="bad">Atrincherarte contra Fuse o Mad Maggie.</p><p class="fix">Sus kits castigan la cobertura fija. Muévete con el escudo y usa el muro para avanzar.</p></article>
+        <article class="mistake"><p class="bad">Revivir en la línea de fuego.</p><p class="fix">Arrastra primero hacia cobertura; el revive termina detrás de algo sólido.</p></article>
+        <article class="mistake"><p class="bad">Lanzar el escudo cuando ya te disparan.</p><p class="fix">El escudo va antes de asomarte, nunca después.</p></article>
+        <article class="mistake"><p class="bad">Alejarte demasiado de tu equipo.</p><p class="fix">Fuera de 75 m no hay rescate posible. Tu kit vale tanto como tu distancia a tus aliados.</p></article>
+        <article class="mistake"><p class="bad">Intentar disparar a través de tu escudo.</p><p class="fix">Bloquea en ambos sentidos. Dispara desde los bordes o espera a que el enemigo se exponga.</p></article>
+        <article class="mistake"><p class="bad">Revivir con Seer enemiga y su táctica lista.</p><p class="fix">Su Foco de atención interrumpe el revive. Provoca que lo gaste o espera su enfriamiento.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capítulo 4 -->
+  <section class="chapter" id="battle-iq">
+    <div class="wrap">
+      <div class="chapter-head">
+        <div>
+          <p class="eyebrow">Capítulo 4</p>
+          <h2>Battle IQ con Newcastle</h2>
+        </div>
+        <p>Battle IQ es la calidad de tus decisiones, no tu puntería: dónde estar, cuándo pelear, cuándo irte y qué habilidad usar en qué segundo. Newcastle es la leyenda que más lo recompensa, porque su definitiva decide una pelea solo si llega en el momento correcto.</p>
+      </div>
+
+      <h3 class="section-title"><small>4.1 · Los cinco pilares</small>Lo que debes tener en la cabeza en todo momento</h3>
+      <div class="pillars">
+        <article class="pillar"><span class="letter">I</span><h4>Información</h4><p>Qué leyendas tiene el enemigo, dónde está, qué ha gastado. Antes de cada pelea nombra la herramienta que más te amenaza (el Foco de Seer, el PEM de Crypto, el taladro de Maggie).</p></article>
+        <article class="pillar"><span class="letter">P</span><h4>Posición</h4><p>Terreno alto, cobertura, distancia a tus aliados y al ring. Newcastle debe estar siempre a menos de 35 m de su equipo, y nunca a más de 75 m.</p></article>
+        <article class="pillar"><span class="letter">T</span><h4>Tiempo</h4><p>El momento en que actúas. El muro antes del empuje enemigo gana peleas; el mismo muro dos segundos tarde solo marca dónde estás.</p></article>
+        <article class="pillar"><span class="letter">R</span><h4>Recursos</h4><p>Vida, escudos, curas, munición, granadas y enfriamientos, los tuyos y los del enemigo. Tu definitiva es el recurso más caro del equipo.</p></article>
+        <article class="pillar"><span class="letter">N</span><h4>Números</h4><p>Cuántos vivos hay en cada lado. Un derribo cambia todo: tres contra dos es empujar, dos contra tres es resetear.</p></article>
+      </div>
+
+      <h3 class="section-title"><small>4.2 · El ciclo de decisión</small>Repítelo en cada pelea</h3>
+      <ol class="loop">
+        <li><b>Observa</b><span>Escucha disparos, celdas y habilidades. ¿Quién está dónde?</span></li>
+        <li><b>Cuenta</b><span>Derribos, escudos rotos, enfriamientos gastados, terceros equipos cerca.</span></li>
+        <li><b>Decide</b><span>Empujar, aguantar, revivir o resetear. Una sola opción, rápido.</span></li>
+        <li><b>Ejecuta</b><span>Escudo primero, después el muro si cambia el resultado.</span></li>
+        <li><b>Resetea</b><span>Muro hacia el ruido, curas, revive, rota. Y vuelve a observar.</span></li>
+      </ol>
+
+      <h3 class="section-title"><small>4.3 · Economía de la definitiva</small>Cuándo gastar Castle Wall</h3>
+      <div class="cards">
+        <article class="card"><span class="tag">Prioridad 1</span><h4>Rescate</h4><p>Aliado derribado en abierto con el enemigo empujando. El muro le salva y te da un revive seguro. Es el uso que más partidas gana.</p></article>
+        <article class="card"><span class="tag">Prioridad 2</span><h4>Cruce vigilado</h4><p>Rotación obligatoria por un campo que un equipo controla. El muro es el puente; sin él, el cruce cuesta vida o un derribo.</p></article>
+        <article class="card"><span class="tag">Prioridad 3</span><h4>Tercer equipo o posición final</h4><p>Un equipo nuevo llega mientras peleáis, o necesitas cobertura en el último anillo. Muro hacia la amenaza nueva.</p></article>
+        <article class="card"><span class="tag">Regla de oro</span><h4>La pregunta de los 30 segundos</h4><p>Antes de pulsar: «si en 30 s necesito la definitiva para un rescate, ¿la tendré?». Si estará lista en menos de 20 s, no fuerces la pelea: espérala.</p></article>
+      </div>
+
+      <h3 class="section-title"><small>4.4 · Contar al enemigo</small>Enfriamientos que conviene vigilar</h3>
+      <p class="prose">No hace falta memorizar todos. Aprende los de las leyendas que más ves y cuenta en voz alta cuando los gasten: esos segundos son tu ventana para revivir o empujar.</p>
+      <div class="table-wrap">
+        <table class="cd-table">
+          <thead><tr><th scope="col">Leyenda</th><th scope="col">Habilidad</th><th scope="col">Tiempo</th><th scope="col">Qué hacer en esa ventana</th></tr></thead>
+          <tbody>
+            <tr><td>Wraith</td><td>Hacia el vacío (táctica)</td><td>15 s</td><td>Tras la fase no tiene escape: empuja.</td></tr>
+            <tr><td>Wraith</td><td>Fisura dimensional (definitiva)</td><td>90 s</td><td>Si gastó el portal para huir, el siguiente tarda.</td></tr>
+            <tr><td>Gibraltar</td><td>Domo de protección</td><td>13 s</td><td>Cuando cae el domo, tienes 13 s antes del siguiente.</td></tr>
+            <tr><td>Ash</td><td>Dash de fase</td><td>10 s</td><td>Castígala justo después del dash.</td></tr>
+            <tr><td>Vantage</td><td>Reubicación de Echo</td><td>17 s</td><td>Si saltó hacia Echo, no puede volver a escapar.</td></tr>
+            <tr><td>Alter</td><td>Pasaje del Vacío</td><td>25 s</td><td>Sin portal, su edificio vuelve a tener una entrada.</td></tr>
+            <tr><td>Loba</td><td>Mercado negro</td><td>120 s</td><td>Si lo usaron para resetear, no repetirán pronto.</td></tr>
+            <tr><td>Octane</td><td>Stim Surge (duración)</td><td>6 s</td><td>Aguanta esos 6 s y contraataca.</td></tr>
+            <tr><td>Axle</td><td>Puerta nitro (efecto)</td><td>5 s</td><td>El deslizamiento potenciado termina pronto: espera tras el muro.</td></tr>
+            <tr><td>Bloodhound</td><td>Camuflaje tras salir del Manto</td><td>12 s</td><td>Cualquier daño lo rompe; dispara a la zona.</td></tr>
+            <tr><td>Newcastle (tú)</td><td>Castle Wall</td><td>≈ 2 min</td><td>Tu referencia: planifica las peleas en torno a ella.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title"><small>4.5 · Árbol de decisión</small>Preguntas rápidas en mitad de la pelea</h3>
+      <div class="tree">
+        <div class="tq"><div class="q">¿Tu aliado derribado está a la vista del enemigo?</div><div class="yes"><b>Sí</b>Escudo móvil delante y arrástralo hacia cobertura antes de terminar el revive.</div><div class="no"><b>No</b>Revive en el sitio y guarda el escudo para frenar el remate o el empuje.</div></div>
+        <div class="tq"><div class="q">¿Tienes la definitiva y el aliado está a más de 35 m?</div><div class="yes"><b>Sí</b>Salta apuntando al aliado (75 m) y gira el muro hacia la amenaza.</div><div class="no"><b>No</b>Escudo móvil hacia él y llega de cobertura en cobertura.</div></div>
+        <div class="tq"><div class="q">¿Hay un tercer equipo a la vista o lo has oído?</div><div class="yes"><b>Sí</b>Muro hacia el que llega. Termina la pelea en 5 s o abandónala.</div><div class="no"><b>No</b>Muro hacia el equipo con el que peleas, solo si cambia el resultado.</div></div>
+        <div class="tq"><div class="q">¿El enemigo lleva Seer, Crypto, Fuse o Mad Maggie?</div><div class="yes"><b>Sí</b>Espera a que gasten esa herramienta antes de comprometer el revive o el muro.</div><div class="no"><b>No</b>Puedes comprometerte antes: tu muro y tu escudo aguantan.</div></div>
+        <div class="tq"><div class="q">¿Estáis en desventaja numérica?</div><div class="yes"><b>Sí</b>Resetea: muro como escape, curas y revive. No empujes.</div><div class="no"><b>No</b>Empuja detrás del escudo; el muro corta su retirada.</div></div>
+        <div class="tq"><div class="q">¿El ring os alcanza en menos de 30 s?</div><div class="yes"><b>Sí</b>Muro como puente hacia la zona. Pelear ahora es perder tiempo.</div><div class="no"><b>No</b>Juega posición y deja que los demás se gasten.</div></div>
+      </div>
+
+      <h3 class="section-title"><small>4.6 · Escenarios</small>Situación, jugada experta y por qué</h3>
+      <div class="scen" id="scenarios">
+        <article><header><span>Rescate</span><h4>Derribo en campo abierto, dos enemigos empujan</h4></header><dl><dt>Jugada experta</dt><dd>Escudo hacia los que empujan. Si está a más de 35 m, salta apuntando al aliado, gira el muro hacia el empuje y arrástralo detrás mientras revives.</dd><dt>Error típico</dt><dd class="bad">Correr hacia él sin escudo y revivir de pie en abierto.</dd><dt>Por qué</dt><dd>El muro convierte un dos contra uno en una pelea contra cobertura; el revive con Ready To Rumble te devuelve al combate cargado.</dd></dl></article>
+        <article><header><span>Terceros</span><h4>Llega un tercer equipo mientras rematas</h4></header><dl><dt>Jugada experta</dt><dd>Muro hacia los que llegan, termina los derribos que tienes y, si no puedes en 5 s, rota.</dd><dt>Error típico</dt><dd class="bad">Poner el muro contra el equipo que ya está roto.</dd><dt>Por qué</dt><dd>El equipo nuevo llega con vida llena: es la amenaza real. Ver lámina 4.6a.</dd></dl></article>
+        <article><header><span>Ring</span><h4>Caustic ocupa el edificio y el ring se acerca</h4></header><dl><dt>Jugada experta</dt><dd>No entres. Muro fuera, frente a la salida, lado electrificado hacia ellos, y espera a que el ring les obligue a salir.</dd><dt>Error típico</dt><dd class="bad">Asaltar la puerta entre barriles de gas.</dd><dt>Por qué</dt><dd>El gas ignora tu escudo y tu muro; el ring hace el trabajo por ti.</dd></dl></article>
+        <article><header><span>Final</span><h4>Último anillo en campo abierto</h4></header><dl><dt>Jugada experta</dt><dd>Llega con la definitiva y úsala en el último cierre, entre tu equipo y el enemigo con mejor ángulo. El escudo mira al segundo equipo.</dd><dt>Error típico</dt><dd class="bad">Levantar el muro un minuto antes y quedarte sin cobertura cuando la tormenta te obliga a moverte.</dd><dt>Por qué</dt><dd>La cobertura que llega tarde no se puede rodear ni planificar. Ver lámina 4.6b.</dd></dl></article>
+        <article><header><span>Rotación</span><h4>Un francotirador vigila tu ruta</h4></header><dl><dt>Jugada experta</dt><dd>Escudo móvil orientado al francotirador; si el campo es largo, salta a mitad de camino con el muro mirándole.</dd><dt>Error típico</dt><dd class="bad">Cruzar corriendo en grupo y comer un disparo marcado de Vantage.</dd><dt>Por qué</dt><dd>Con el muro como puente el cruce cuesta cero vida.</dd></dl></article>
+        <article><header><span>Contra-empuje</span><h4>Octane se lanza con su plataforma</h4></header><dl><dt>Jugada experta</dt><dd>Muro en la línea de aterrizaje, lado electrificado hacia él. Aterriza, trepa, queda aturdido delante de tu equipo.</dd><dt>Error típico</dt><dd class="bad">Perseguirle durante Stim Surge.</dd><dt>Por qué</dt><dd>Octane entra primero y solo: aislado y aturdido es un derribo gratis.</dd></dl></article>
+        <article><header><span>Disciplina</span><h4>Tu equipo está a 80 m y pierde la pelea</h4></header><dl><dt>Jugada experta</dt><dd>No saltes. Acércate por cobertura, deja que el enemigo se gaste y recupera los estandartes saltando a la caja cuando sea seguro.</dd><dt>Error típico</dt><dd class="bad">Saltar al límite del alcance y morir en el aire.</dd><dt>Por qué</dt><dd>Un Newcastle vivo puede devolver a dos compañeros; uno muerto, a nadie.</dd></dl></article>
+        <article><header><span>Información</span><h4>Seer prepara su táctica antes de tu revive</h4></header><dl><dt>Jugada experta</dt><dd>Amaga el revive para que gaste el Foco de atención; revive en cuanto lo use.</dd><dt>Error típico</dt><dd class="bad">Empezar el revive a la vista con su táctica lista.</dd><dt>Por qué</dt><dd>El Foco atraviesa paredes e interrumpe revives: su enfriamiento es tu ventana.</dd></dl></article>
+        <article><header><span>Reset</span><h4>Ganaste la pelea, pero a media vida</h4></header><dl><dt>Jugada experta</dt><dd>Muro hacia el ruido más cercano, curas, revive detrás y saqueo de menos de 30 s. Después, rota.</dd><dt>Error típico</dt><dd class="bad">Saquear las cajas a la vista con un equipo acercándose.</dd><dt>Por qué</dt><dd>Pelea ganada no es pelea terminada. Ver lámina 4.6c.</dd></dl></article>
+        <article><header><span>Supervivencia</span><h4>Eres el último vivo de tu equipo</h4></header><dl><dt>Jugada experta</dt><dd>Usa el muro para escapar, no para pelear. Sobrevive, cura y vuelve por los estandartes.</dd><dt>Error típico</dt><dd class="bad">Intentar un revive heroico contra un equipo completo.</dd><dt>Por qué</dt><dd>Tu clase de Apoyo puede fabricar estandartes en el replicador: tu equipo vuelve si tú vives.</dd></dl></article>
+      </div>
+      <div class="plates" style="margin-top:16px">
+        <figure class="plate" data-dia="third" data-title="Lámina 4.6a · Anti tercer equipo" data-cap="Termina los derribos del equipo A (1), muro hacia el equipo B que llega (2) y empuja al A ya roto (3)."></figure>
+        <figure class="plate" data-dia="final" data-title="Lámina 4.6b · Anillo final" data-cap="Definitiva guardada hasta el último cierre (1), muro contra el equipo con mejor ángulo (2) y escudo móvil hacia el segundo equipo (3)."></figure>
+        <figure class="plate" data-dia="reset" data-title="Lámina 4.6c · Resetear" data-cap="Muro hacia los que se acercan (1), revive y curas detrás (2) antes de que lleguen (3)."></figure>
+        <figure class="plate" data-dia="rotacion" data-title="Lámina 4.6d · Rotación por el borde" data-cap="Rodea por el borde, de cobertura en cobertura (1), muro en el tramo abierto (2) y entra a la zona lejos de la pelea del centro (3)."></figure>
+      </div>
+
+      <h3 class="section-title"><small>4.7 · Comunicación</small>Llamadas cortas para tu equipo</h3>
+      <div class="table-wrap">
+        <table class="calls">
+          <tbody>
+            <tr><td>«Muro en 3»</td><td>En 3 segundos salto con la definitiva: agrupaos detrás.</td></tr>
+            <tr><td>«Escudo arriba» / «Escudo roto»</td><td>Hay cobertura móvil delante / se ha perdido: no os asoméis por ahí.</td></tr>
+            <tr><td>«Voy por él»</td><td>Voy a revivir a ese compañero: cubridme los ángulos.</td></tr>
+            <tr><td>«Electrificado al norte»</td><td>El lado electrificado del muro mira al norte: no lo crucéis vosotros.</td></tr>
+            <tr><td>«Ult en 20»</td><td>Mi definitiva estará lista en 20 s: aguantad antes de forzar.</td></tr>
+            <tr><td>«Gastó el Foco» / «Gastó el PEM»</td><td>La herramienta enemiga clave está en enfriamiento: momento de revivir o empujar.</td></tr>
+            <tr><td>«Uno roto, vamos»</td><td>Un enemigo sin escudo: empujamos tras el escudo móvil.</td></tr>
+            <tr><td>«Tercero, este»</td><td>Llega otro equipo desde el este: el muro mirará hacia allí.</td></tr>
+            <tr><td>«Reset»</td><td>Nos retiramos, curamos y revivimos detrás del muro.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="section-title"><small>4.8 · Listas de control</small>Antes, durante y después de cada pelea</h3>
+      <div class="checklists" id="checklists">
+        <article class="card"><h4>Antes</h4><ul class="check">
+          <li><label><input type="checkbox" id="ck-a1">Sé dónde está el próximo ring y por dónde rotar.</label></li>
+          <li><label><input type="checkbox" id="ck-a2">Estoy a menos de 35 m de mis aliados.</label></li>
+          <li><label><input type="checkbox" id="ck-a3">Sé cuándo estará lista mi definitiva.</label></li>
+          <li><label><input type="checkbox" id="ck-a4">Llevo el mejor escudo de derribo posible.</label></li>
+          <li><label><input type="checkbox" id="ck-a5">Sé qué leyendas tiene el enemigo y qué herramienta temer.</label></li>
+        </ul></article>
+        <article class="card"><h4>Durante</h4><ul class="check">
+          <li><label><input type="checkbox" id="ck-b1">Escudo antes de asomarme.</label></li>
+          <li><label><input type="checkbox" id="ck-b2">Cuento derribos y escudos rotos.</label></li>
+          <li><label><input type="checkbox" id="ck-b3">Muro solo si cambia el resultado.</label></li>
+          <li><label><input type="checkbox" id="ck-b4">Muro orientado a la amenaza mayor.</label></li>
+          <li><label><input type="checkbox" id="ck-b5">Revive detrás de cobertura.</label></li>
+        </ul></article>
+        <article class="card"><h4>Después</h4><ul class="check">
+          <li><label><input type="checkbox" id="ck-c1">Muro o escudo hacia el ruido más cercano.</label></li>
+          <li><label><input type="checkbox" id="ck-c2">Curas y revive antes de saquear.</label></li>
+          <li><label><input type="checkbox" id="ck-c3">Saqueo de menos de 30 s.</label></li>
+          <li><label><input type="checkbox" id="ck-c4">Rotar: las cajas atraen a Ash y a terceros.</label></li>
+          <li><label><input type="checkbox" id="ck-c5">Sé qué gasté y cuándo vuelve.</label></li>
+        </ul></article>
+      </div>
+
+      <h3 class="section-title"><small>4.9 · Entrenamiento</small>Rutina para subir tu Battle IQ</h3>
+      <ol class="drills">
+        <li><b>Control del escudo (Campo de tiro).</b> Muévete a izquierda y derecha manteniendo el escudo entre tú y un muñeco durante 20 s. Cinco repeticiones al empezar cada sesión.</li>
+        <li><b>Saltos con giro (Campo de tiro).</b> Salta hacia un punto y gira 90° en el aire antes de aterrizar. Repite hasta que orientes el muro sin pensarlo.</li>
+        <li><b>Revive con ruta.</b> En partidas normales, cada revive debe terminar detrás de algo sólido. Cuenta cuántos lo cumplen por sesión.</li>
+        <li><b>Una pregunta por muerte.</b> Tras cada eliminación responde: ¿fue información, posición, tiempo, recursos o números?</li>
+        <li><b>Diario de la definitiva.</b> Anota cada Castle Wall y si cambió el resultado. Objetivo: que más de 7 de cada 10 sean útiles.</li>
+        <li><b>Un clip por sesión.</b> Revisa una pelea perdida y busca el segundo exacto en el que debiste levantar el muro o lanzar el escudo.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Kits actualizados hasta el Split 2 de la Temporada 30 «Marked» (parche del 14 de septiembre de 2026). Las ilustraciones, iconos y diagramas son originales de esta guía. Apex Legends y sus personajes son marcas de Electronic Arts y Respawn Entertainment; esta es una guía de fans sin afiliación.</p>
+    <p>Fuentes principales:</p>
+    <ul>
+      <li><a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-midseason-patch-notes" rel="noopener">Notas Marked (mitad de temporada)</a></li>
+      <li><a href="https://www.ea.com/games/apex-legends/apex-legends/news/marked-game-updates" rel="noopener">Novedades de Marked</a></li>
+      <li><a href="https://www.ea.com/en/games/apex-legends/apex-legends/news/overclocked-patch-notes" rel="noopener">Notas Overclocked (T29)</a></li>
+      <li><a href="https://www.ea.com/en/games/apex-legends/apex-legends/news/amped-patch-notes" rel="noopener">Notas Amped (T27)</a></li>
+      <li><a href="https://www.ea.com/games/apex-legends/apex-legends/news/showdown-patch-notes" rel="noopener">Notas Showdown (T26)</a></li>
+      <li><a href="https://www.ea.com/en/games/apex-legends/apex-legends/news/winter-wipeout-event" rel="noopener">Winter Wipeout (ene 2026)</a></li>
+      <li><a href="https://apexdb.gg/legend/newcastle/" rel="noopener">ApexDB · Newcastle</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/legends-a.js"></script>
+<script src="js/legends-b.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
